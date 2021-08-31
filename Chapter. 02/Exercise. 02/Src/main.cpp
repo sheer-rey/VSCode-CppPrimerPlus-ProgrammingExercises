@@ -28,15 +28,15 @@ void MyFun7_1(int iHours, int iMinutes)
 
 int main()
 {
-    //Exercise 01
-    cout << "Exercise 01" << endl;
+    //Subject 01
+    cout << "Subject 01" << endl;
     cout << "Author: sheer.rey" << endl;
     cout << "Institude: UESTC" << endl;
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 02
-    cout << "Exercise 02" << endl;
+    //Subject 02
+    cout << "Subject 02" << endl;
     int iDistance;
     cout << "Please input a distance in unit \"long\": ";
     cin >> iDistance;
@@ -45,8 +45,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 03
-    cout << "Exercise 03" << endl;
+    //Subject 03
+    cout << "Subject 03" << endl;
     MyFunc3_1();
     MyFunc3_1();
     MyFunc3_2();
@@ -54,8 +54,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 04
-    cout << "Exercise 04" << endl;
+    //Subject 04
+    cout << "Subject 04" << endl;
     cout << "Enter your age: ";
     int age;
     cin >> age;
@@ -64,8 +64,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 05
-    cout << "Exercise 05" << endl;
+    //Subject 05
+    cout << "Subject 05" << endl;
     cout << "Please enter a Celsius value: ";
     float fCelsius;
     cin >> fCelsius;
@@ -74,8 +74,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 06
-    cout << "Exercise 06" << endl;
+    //Subject 06
+    cout << "Subject 06" << endl;
     cout << "Please enter the number of light years: ";
     double dLightYear;
     cin >> dLightYear;
@@ -84,8 +84,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 07
-    cout << "Exercise 07" << endl;
+    //Subject 07
+    cout << "Subject 07" << endl;
     cout << "Please enter the number of hours: ";
     int iHours;
     cin >> iHours;

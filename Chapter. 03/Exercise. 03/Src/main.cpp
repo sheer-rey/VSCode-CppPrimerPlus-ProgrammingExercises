@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    //Exercise 01
-    cout << "Exercise 01" << endl;
+    //Subject 01
+    cout << "Subject 01" << endl;
     cout << "Please enter your body height in unit cm: ___\b\b\b";
     int iHeightCM_1;
     cin >> iHeightCM_1;
@@ -15,8 +15,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 02
-    cout << "Exercise 02" << endl;
+    //Subject 02
+    cout << "Subject 02" << endl;
     cout << "Please enter your body height in unit x foot and y inch:" << endl;
     cout << "x: ";
     float fFoot_2;
@@ -35,8 +35,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 03
-    cout << "Exercise 03" << endl;
+    //Subject 03
+    cout << "Subject 03" << endl;
     cout << "Please enter a latitude in degree, minutes and seconds:" << endl;
     cout << "First, enter the degrees: ";
     int iDegree_3;
@@ -53,8 +53,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    // Exercise 04
-    cout << "Exercise 04" << endl;
+    // Subject 04
+    cout << "Subject 04" << endl;
     cout << "Please enter the number of seconds: ";
     long lSeconds_4;
     cin >> lSeconds_4;
@@ -66,8 +66,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    // Exercise 05
-    cout << "Exercise 05" << endl;
+    // Subject 05
+    cout << "Subject 05" << endl;
     cout << "Please enter the world's population: ";
     long long llWorldPopulation_5;
     cin >> llWorldPopulation_5;
@@ -79,8 +79,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    // Exercise 06
-    cout << "Exercise 06" << endl;
+    // Subject 06
+    cout << "Subject 06" << endl;
     cout << "Please enter the driving distance in kilometer: ";
     int iKilometer_6;
     cin >> iKilometer_6;
@@ -92,8 +92,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    // Exercise 07
-    cout << "Exercise 07" << endl;
+    // Subject 07
+    cout << "Subject 07" << endl;
     cout << "Please enter the gas consumption in L/100KM: ";
     float fLper100KM_7;
     cin >> fLper100KM_7;

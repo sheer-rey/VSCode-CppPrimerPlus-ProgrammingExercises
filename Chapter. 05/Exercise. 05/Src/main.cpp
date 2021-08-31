@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    //Exercise 01
-    cout << "Exercise 01" << endl;
+    //Subject 01
+    cout << "Subject 01" << endl;
     cout << "Please enter two integer: ";
     int a_1, b_1;
     (cin >> a_1 >> b_1).get();
@@ -24,8 +24,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 02
-    cout << "Exercise 02" << endl;
+    //Subject 02
+    cout << "Subject 02" << endl;
     const int iARSIZE_2 = 16;
     array<long long, iARSIZE_2> llFactorial_2 = {1};
     for (int i = 1; i < int(llFactorial_2.size()); i++)
@@ -36,7 +36,7 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 03
-    cout << "Exercise 03" << endl;
+    //Subject 03
+    cout << "Subject 03" << endl;
     return 0;
 }

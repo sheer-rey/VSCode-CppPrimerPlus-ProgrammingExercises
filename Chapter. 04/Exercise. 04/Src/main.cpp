@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
-    //Exercise 01
-    cout << "Exercise 01" << endl;
+    //Subject 01
+    cout << "Subject 01" << endl;
     cout << "What is your first name? ";
     const int iNAMESIZE_1 = 20;
     char cFirstName_1[iNAMESIZE_1] = {};
@@ -29,8 +29,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 02
-    cout << "Exercise 02" << endl;
+    //Subject 02
+    cout << "Subject 02" << endl;
     string strName_2, strDessert_2;
     cout << "Please enter your name: ";
     getline(cin, strName_2);
@@ -41,8 +41,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 03
-    cout << "Exercise 03" << endl;
+    //Subject 03
+    cout << "Subject 03" << endl;
     cout << "Please enter your first name: ";
     const int iARSIZE_3 = 20;
     char cFirstName_3[iARSIZE_3] = {};
@@ -57,8 +57,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 04
-    cout << "Exercise 04" << endl;
+    //Subject 04
+    cout << "Subject 04" << endl;
     cout << "Please enter your first name: ";
     string strFirstName_4;
     getline(cin, strFirstName_4);
@@ -72,8 +72,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 05
-    cout << "Exercise 05" << endl;
+    //Subject 05
+    cout << "Subject 05" << endl;
     struct CandyBar
     {
         string strBand;
@@ -88,8 +88,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 06
-    cout << "Exercise 06" << endl;
+    //Subject 06
+    cout << "Subject 06" << endl;
     struct FastFoodBar
     {
         string strBand;
@@ -110,8 +110,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 07
-    cout << "Exercise 07" << endl;
+    //Subject 07
+    cout << "Subject 07" << endl;
     struct PizzaBar
     {
         string strBand;
@@ -132,8 +132,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 08
-    cout << "Exercise 08" << endl;
+    //Subject 08
+    cout << "Subject 08" << endl;
     PizzaBar *pPizza_8;
     pPizza_8 = new PizzaBar;
     cout << "Please enter Pizza Band: ";
@@ -150,8 +150,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 09
-    cout << "Exercise 09" << endl;
+    //Subject 09
+    cout << "Subject 09" << endl;
     FastFoodBar *pFastFood_9 = new FastFoodBar[3];
     *pFastFood_9 = {"Dicos", 1.0, 100};
     *(pFastFood_9 + 1) = {"KFC", 1.0, 100};
@@ -170,8 +170,8 @@ int main()
     cout << "Press any key to continue." << endl;
     cin.get();
 
-    //Exercise 10
-    cout << "Exercise 10" << endl;
+    //Subject 10
+    cout << "Subject 10" << endl;
     cout << "Please enter the 3 times score in 40-yards running(s): ";
     array<double, 3> arScore;
     (cin >> arScore[0] >> arScore[1] >> arScore[2]).get();
