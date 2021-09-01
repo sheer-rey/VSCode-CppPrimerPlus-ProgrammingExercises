@@ -26,7 +26,7 @@ int main()
     cout << "Grade: " << char(cGrade_1 + 1) << endl;
     cout << "Age: " << iAge << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 02
@@ -38,7 +38,7 @@ int main()
     getline(cin, strDessert_2);
     cout << "I hhave some delicious " << strDessert_2 << " for you, " << strName_2 << "." << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 03
@@ -54,7 +54,7 @@ int main()
     strcat(cLastName_3, cFirstName_3);
     cout << "Here's the information in a single string: " << cLastName_3 << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 04
@@ -69,7 +69,7 @@ int main()
     strLastName_4.append(strFirstName_4);
     cout << "Here's the information in a single string: " << strLastName_4 << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 05
@@ -85,7 +85,7 @@ int main()
     cout << "snack.fWeight: " << snack.fWeight << " kg" << endl;
     cout << "snack.iCalorie: " << snack.iCalorie << " kcal" << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 06
@@ -107,7 +107,7 @@ int main()
     cout << "FastFood_6[2].fWeight: " << FastFood_6[2].fWeight << " kg" << endl;
     cout << "FastFood_6[2].iCalorie: " << FastFood_6[2].iCalorie << " kcal" << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 07
@@ -129,7 +129,7 @@ int main()
     cout << "Pizza_7.fDiameter: " << Pizza_7.fDiameter << " inch" << endl;
     cout << "Pizza_7.fWeight: " << Pizza_7.fWeight << " g" << endl;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 08
@@ -147,7 +147,7 @@ int main()
     cout << "pPizza_8->fWeight: " << pPizza_8->fWeight << " g" << endl;
     delete pPizza_8;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 09
@@ -167,7 +167,7 @@ int main()
     cout << "pFastFood_9[2].iCalorie: " << pFastFood_9[2].iCalorie << " kcal" << endl;
     delete[] pFastFood_9;
 
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 10

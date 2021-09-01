@@ -32,7 +32,7 @@ int main()
     cout << "Subject 01" << endl;
     cout << "Author: sheer.rey" << endl;
     cout << "Institude: UESTC" << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 02
@@ -42,7 +42,7 @@ int main()
     cin >> iDistance;
     cin.get();
     cout << "Tne distance in uint \"码\" is " << iDistance * 220 << "." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 03
@@ -51,7 +51,7 @@ int main()
     MyFunc3_1();
     MyFunc3_2();
     MyFunc3_2();
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 04
@@ -61,7 +61,7 @@ int main()
     cin >> age;
     cin.get();
     cout << "The age contains " << age * 12 << " months." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 05
@@ -71,7 +71,7 @@ int main()
     cin >> fCelsius;
     cin.get();
     cout << fCelsius << " degrees Celsius is " << MyFun5_1(fCelsius) << " degrees Fahrenheit." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 06
@@ -81,7 +81,7 @@ int main()
     cin >> dLightYear;
     cin.get();
     cout << dLightYear << " light years = " << MyFun6_1(dLightYear) << " astronomical units." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 07
