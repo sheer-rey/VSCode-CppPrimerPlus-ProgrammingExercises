@@ -12,7 +12,7 @@ int main()
     cin.get();
     const int M2CM_1 = 100;
     cout << "Your body height is " << iHeightCM_1 / M2CM_1 << "m " << iHeightCM_1 % M2CM_1 << "cm." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 02
@@ -32,7 +32,7 @@ int main()
     const float INCH2M_2 = 0.0254;
     const float KG2POUND_2 = 2.2;
     cout << "Your BMI is: " << fPound_2 / KG2POUND_2 / pow((fFoot_2 * FOOT2INCH_2 + fInch_2) * INCH2M_2, 2) << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     //Subject 03
@@ -50,7 +50,7 @@ int main()
     cin.get();
     const float DEG2MIN_MIN2SEC_3 = 60.0;
     cout << iDegree_3 << " degrees, " << iMinute_3 << " minutes, " << iSecond_3 << " seconds = " << float(iDegree_3 + iMinute_3 / DEG2MIN_MIN2SEC_3 + iSecond_3 / DEG2MIN_MIN2SEC_3 / DEG2MIN_MIN2SEC_3) << " degrees." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     // Subject 04
@@ -63,7 +63,7 @@ int main()
     const int HOUR2MINUTE_4 = 60;
     const int MINUTE2SECOND_4 = 60;
     cout << lSeconds_4 << " seconds = " << lSeconds_4 / (MINUTE2SECOND_4 * HOUR2MINUTE_4 * DAY2HOUR_4) << " days, " << lSeconds_4 % (MINUTE2SECOND_4 * HOUR2MINUTE_4 * DAY2HOUR_4) / (MINUTE2SECOND_4 * HOUR2MINUTE_4) << " hours, " << lSeconds_4 % (MINUTE2SECOND_4 * HOUR2MINUTE_4) / MINUTE2SECOND_4 << " minutes, " << lSeconds_4 % MINUTE2SECOND_4 << " seconds." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     // Subject 05
@@ -76,7 +76,7 @@ int main()
     cin >> llUSPopulation_5;
     cin.get();
     cout << "The population of the US is " << double(llUSPopulation_5) / llWorldPopulation_5 * 100.0 << "% of the world population." << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     // Subject 06
@@ -89,7 +89,7 @@ int main()
     cin >> iLitre_6;
     cin.get();
     cout << "The gas consumption per 100km is: " << float(iLitre_6) / iKilometer_6 * 100.0 << endl;
-    cout << "Press any key to continue." << endl;
+    cout << "\nPress any key to continue." << endl;
     cin.get();
 
     // Subject 07
