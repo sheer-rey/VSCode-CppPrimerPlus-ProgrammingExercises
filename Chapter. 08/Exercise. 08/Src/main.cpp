@@ -36,10 +36,9 @@ T Max5_5(const T *arr);
 
 // Subject 06
 template <typename T>
-T Maxn_6(const T *arr, int n);
-typedef char *arrString_6;
+T Maxn_6(T *arr, int n);
 template <>
-arrString_6 Maxn_6<arrString_6>(const arrString_6 *arr, int n);
+char *Maxn_6<char *>(char **arr, int n);
 
 // Subject 07
 struct debt_7
@@ -148,7 +147,7 @@ int main()
     cout << "The longest string in string array { ";
     for (char *x : arrArr_6)
         cout << "\"" << x << "\" ";
-    cout << "} is \"" << Maxn_6<arrString_6>(arrArr_6, 5) << "\"" << endl;
+    cout << "} is \"" << Maxn_6(arrArr_6, 5) << "\"" << endl;
 
     cin.sync();
     cout << "\nPress any key to continue." << endl;
@@ -255,7 +254,7 @@ T Max5_5(const T *arr)
 
 // Subject 06
 template <typename T>
-T Maxn_6(const T *arr, int n)
+T Maxn_6(T *arr, int n)
 {
     T temp = *arr;
     for (int i = 1; i < n; i++)
@@ -265,9 +264,9 @@ T Maxn_6(const T *arr, int n)
 }
 
 template <>
-arrString_6 Maxn_6<arrString_6>(const arrString_6 *arr, int n)
+char *Maxn_6<char *>(char **arr, int n)
 {
-    arrString_6 temp = *arr;
+    char *temp = *arr;
     for (int i = 1; i < n; i++)
         if (strlen(arr[i]) > strlen(temp))
             temp = arr[i];
