@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    //Subject 01
+    // Subject 01
     cout << "Subject 01" << endl;
     cout << "Please enter a serise of letter, end with '@': " << endl;
     string str_1 = {};
@@ -49,7 +49,7 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 02
+    // Subject 02
     cout << "Subject 02" << endl;
     cout << "Please enter at most 10 donations: ";
     const int iMaxSize_2 = 10;
@@ -80,7 +80,7 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 03
+    // Subject 03
     cout << "Subject 03" << endl;
     cout << "Please enter one of the following choices: " << endl;
     cout << "c) carnivore\t\tp) pianist" << endl;
@@ -113,17 +113,17 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 04
+    // Subject 04
     cout << "Subject 04" << endl;
     const int iSTRSIZE = 20;
     struct bop_4
     {
-        char cFullName[iSTRSIZE]; //real name
-        char cTitle[iSTRSIZE];    //job title
-        char cBopName[iSTRSIZE];  //secret BOP name
-        int iPreference;          //0 = fullname, 1 = title, 2 = bopname
+        char cFullName[iSTRSIZE]; // real name
+        char cTitle[iSTRSIZE];    // job title
+        char cBopName[iSTRSIZE];  // secret BOP name
+        int iPreference;          // 0 = fullname, 1 = title, 2 = bopname
     };
-    //Initialization
+    // Initialization
     bop_4 bopBopMember_4[2] = {{"Edward", "Husband", "sheer.rey", 2}, {"W+0", "Wife", "Isabella", 0}};
     cout << "Benevolent Order of Programmers Report" << endl;
     cout << "a. display by name\tb. display by title" << endl;
@@ -178,7 +178,7 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 05
+    // Subject 05
     cout << "Subject 05" << endl;
     cout << "Please enter your income(tvarps): ";
     float iIncome_5;
@@ -208,7 +208,7 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 06
+    // Subject 06
     cout << "Subject 06" << endl;
     cout << "Please enter the number of donator: ";
     int iNumberofDonator_6;
@@ -255,7 +255,7 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 07
+    // Subject 07
     cout << "Subject 07" << endl;
     cout << "Enter words (q to quit) : " << endl;
     string strWords_7;
@@ -280,10 +280,10 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 08
+    // Subject 08
     cout << "Subject 08" << endl;
     ifstream ifsInFile_8;
-    ifsInFile_8.open("../Files/Subject_08.txt");
+    ifsInFile_8.open(R"(../Files/Subject_08.txt)");
     if (!ifsInFile_8.is_open())
     {
         cout << "Could not open file \"Subject_08.txt\"\nProgramme Terminated." << endl;
@@ -304,10 +304,10 @@ int main()
     cout << "\nPress any key to continue." << endl;
     cin.get();
 
-    //Subject 09
+    // Subject 09
     cout << "Subject 09" << endl;
     ifstream ifsInFile_9;
-    ifsInFile_9.open("../Files/Subject_09");
+    ifsInFile_9.open(R"(../Files/Subject_09)");
     if (!ifsInFile_9.is_open())
     {
         cout << "Could not open file \"Subject_09\"\nProgramme Terminated." << endl;
