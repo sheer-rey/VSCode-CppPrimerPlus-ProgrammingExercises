@@ -194,7 +194,9 @@ namespace subject05
       two_person.m_friends.push_back(x);
 
     sort(two_person.m_friends.begin(), two_person.m_friends.end());
-    two_person.m_friends.erase(unique(two_person.m_friends.begin(), two_person.m_friends.end()), two_person.m_friends.end());
+    two_person.m_friends.erase(unique(two_person.m_friends.begin(),
+                                      two_person.m_friends.end()),
+                               two_person.m_friends.end());
 
     return two_person;
   }
@@ -241,10 +243,348 @@ namespace subject05
 
 namespace subject06
 {
+  /* Class AbstrEmp */
+  AbstrEmp::~AbstrEmp()
+  {
+  }
 
+  void AbstrEmp::ShowAll() const
+  {
+    cout << "Name: " << m_first_name << ' ' << m_last_name << endl;
+    cout << "Job: " << m_job << endl;
+  }
+
+  void AbstrEmp::SetAll()
+  {
+    cout << "Enter the information below: " << endl;
+    cout << "First Name: ";
+    cin >> m_first_name;
+    cout << "Last Name: ";
+    cin >> m_last_name;
+    cout << "Job: ";
+    cin >> m_job;
+  }
+
+  bool AbstrEmp::SetAll(vector<string> &vec_str)
+  {
+    if (vec_str.size() < 3)
+      return false;
+    m_first_name = vec_str[0];
+    m_last_name = vec_str[1];
+    m_job = vec_str[2];
+    return true;
+  }
+
+  void AbstrEmp::SavetoFile(fstream &fout) const
+  {
+    fout << m_first_name << endl;
+    fout << m_last_name << endl;
+    fout << m_job << endl;
+  }
+
+  // just display first and last name
+  ostream &operator<<(ostream &os, const AbstrEmp &abstr_emp)
+  {
+    os << "Name: " << abstr_emp.m_first_name << ' ' << abstr_emp.m_last_name;
+    return os;
+  }
+
+  /* Class Employee */
+  void Employee::SavetoFile(fstream &fout) const
+  {
+    fout << "Employee" << endl;
+    AbstrEmp::SavetoFile(fout);
+  }
+
+  /* Class Manager */
+  void Manager::ShowAll() const
+  {
+    AbstrEmp::ShowAll();
+    cout << "In Charge of: " << m_in_charge_of << endl;
+  }
+
+  void Manager::SetAll()
+  {
+    AbstrEmp::SetAll();
+    cout << "In Charge of (integer): ";
+    while (!(cin >> m_in_charge_of))
+    {
+      cout << "input error, reinput information of In Charge of (integer): ";
+      cin.clear();
+      cin.sync();
+    }
+  }
+
+  bool Manager::SetAll(vector<string> &vec_str)
+  {
+    if (vec_str.size() < 4)
+      return false;
+    AbstrEmp::SetAll(vec_str);
+    m_in_charge_of = stoi(vec_str[3]);
+    return true;
+  }
+
+  void Manager::SavetoFile(fstream &fout) const
+  {
+    fout << "Manager" << endl;
+    AbstrEmp::SavetoFile(fout);
+    fout << m_in_charge_of << endl;
+  }
+
+  /* Class Fink */
+  void Fink::ShowAll() const
+  {
+    AbstrEmp::ShowAll();
+    cout << "Reports to: " << m_reports_to << endl;
+  }
+
+  void Fink::SetAll()
+  {
+    AbstrEmp::SetAll();
+    cout << "Reports to: ";
+    cin >> m_reports_to;
+  }
+
+  bool Fink::SetAll(vector<string> &vec_str)
+  {
+    if (vec_str.size() < 4)
+      return false;
+    AbstrEmp::SetAll(vec_str);
+    m_reports_to = vec_str[3];
+    return true;
+  }
+
+  void Fink::SavetoFile(fstream &fout) const
+  {
+    fout << "Fink" << endl;
+    AbstrEmp::SavetoFile(fout);
+    fout << m_reports_to << endl;
+  }
+
+  /* Class HighFink */
+  void HighFink::ShowAll() const
+  {
+    AbstrEmp::ShowAll();
+    cout << "Reports to: " << M_Reportsto() << endl;
+    cout << "In Charge of: " << M_InChargeof() << endl;
+  }
+
+  void HighFink::SetAll()
+  {
+    AbstrEmp::SetAll();
+    cout << "Reports to: ";
+    cin >> M_Reportsto();
+    cout << "In Charge of (integer): ";
+    while (!(cin >> M_InChargeof()))
+    {
+      cout << "input error, reinput information of In Charge of (integer): ";
+      cin.clear();
+      cin.sync();
+    }
+  }
+
+  bool HighFink::SetAll(vector<string> &vec_str)
+  {
+    if (vec_str.size() < 5)
+      return false;
+    AbstrEmp::SetAll(vec_str);
+    M_InChargeof() = stoi(vec_str[3]);
+    M_Reportsto() = vec_str[4];
+    return true;
+  }
+
+  void HighFink::SavetoFile(fstream &fout) const
+  {
+    fout << "HighFink" << endl;
+    AbstrEmp::SavetoFile(fout);
+    fout << M_InChargeof() << endl;
+    fout << M_Reportsto() << endl;
+  }
+
+  FileStatus ReadFile(fstream &fin, vector<AbstrEmp *> &employee_vec)
+  {
+    while (isspace(fin.peek()))
+      fin.get();
+    if (fin.peek() == EOF)
+    {
+      fin.clear();
+      return cEmpty;
+    }
+    else
+    {
+      cout << "Reading file..." << endl;
+      AbstrEmp *temp;
+      string str;
+      vector<string> obj_info;
+      int info_number;
+      while (getline(fin, str))
+      {
+        if (str.size()) // not an empty line
+        {
+          if (str == "Employee")
+          {
+            temp = new Employee;
+            info_number = 3;
+          }
+          else if (str == "Manager")
+          {
+            temp = new Manager;
+            info_number = 4;
+          }
+          else if (str == "Fink")
+          {
+            temp = new Fink;
+            info_number = 4;
+          }
+          else if (str == "HighFink")
+          {
+            temp = new HighFink;
+            info_number = 5;
+          }
+          else
+          {
+            cerr << "Data file damaged!" << endl;
+            return cDamage;
+          }
+
+          // Extract object's information
+          for (int i = 0; i < info_number; i++)
+          {
+            getline(fin, str);
+            if (fin)
+              obj_info.push_back(str);
+            else
+            {
+              cerr << "Data file damaged!" << endl;
+              return cDamage;
+            }
+          }
+          temp->SetAll(obj_info);
+          obj_info.clear();
+          // store boject's pointer
+          employee_vec.push_back(temp);
+        }
+        else
+          continue;
+      }
+
+      if (fin.eof())
+      {
+        cout << "Reading file done!" << endl;
+        fin.clear();
+        return cNotEmpty;
+      }
+      else
+      {
+        cerr << "Data file damaged!" << endl;
+        fin.clear();
+        return cDamage;
+      }
+    }
+  }
+
+  void WriteFile(fstream &fout, const vector<AbstrEmp *> &employee_vec)
+  {
+    if (employee_vec.size())
+    {
+      cout << "Writing file..." << endl;
+      fout.seekp(0, ios_base::end);
+      for (auto x : employee_vec)
+      {
+        fout << endl;
+        x->SavetoFile(fout);
+      }
+      cout << "Writing file done." << endl;
+    }
+  }
+
+  void ShowInfo(const vector<AbstrEmp *> &employee_vec)
+  {
+    for (AbstrEmp *x : employee_vec)
+    {
+      x->ShowAll();
+      cout << endl;
+    }
+  }
+
+  void SetInfo(vector<AbstrEmp *> &employee_vec)
+  {
+    cout << "Which category's infomation you want to input? (q to quit)" << endl;
+    cout << "e: employee        m: manager" << endl;
+    cout << "f: fink            h: highfink" << endl;
+    char c;
+    cin >> c;
+    AbstrEmp *temp;
+    bool error_flag = false;
+    while (c != 'q')
+    {
+      switch (c)
+      {
+      case 'e':
+        temp = new Employee;
+        break;
+
+      case 'm':
+        temp = new Manager;
+        break;
+
+      case 'f':
+        temp = new Fink;
+        break;
+
+      case 'h':
+        temp = new HighFink;
+        break;
+
+      default:
+        cout << "input error!" << endl;
+        error_flag = true;
+        break;
+      }
+      if (error_flag)
+        error_flag = false;
+      else
+      {
+        temp->SetAll();
+        employee_vec.push_back(temp);
+      }
+      cout << endl;
+      cout << "Okay, which category's infomation next you want to input? (q to quit)" << endl;
+      cout << "e: employee        m: manager" << endl;
+      cout << "f: fink            h: highfink" << endl;
+      cin >> c;
+    }
+    cout << "Done!" << endl;
+  }
 }
 
 namespace subject07
 {
+  void ShowStr(const string &str)
+  {
+    cout << str << endl;
+  }
 
+  void Store::operator()(const string &str)
+  {
+    long str_lenth = str.size();
+    m_fout.write((char *)(&str_lenth), sizeof(str_lenth));
+    m_fout.write(str.data(), str.size());
+  }
+
+  void GetStrs(ifstream &fin, vector<string> &vec_str)
+  {
+    long str_lenth;
+    char *str;
+    fin.read((char *)&str_lenth, sizeof(str_lenth));
+    while (fin)
+    {
+      str = new char[str_lenth + 1];
+      str[str_lenth] = 0;
+      fin.read(str, str_lenth);
+      vec_str.push_back(string(str));
+      delete str;
+      fin.read((char *)&str_lenth, sizeof(str_lenth));
+    }
+  }
 }

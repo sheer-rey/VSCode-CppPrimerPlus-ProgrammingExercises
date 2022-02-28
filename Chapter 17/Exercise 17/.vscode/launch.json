@@ -12,7 +12,7 @@
             // Command line arguments passed to the program.
             "args": [
                 "./Files/subject02.txt",
-                "./files/subject03.txt"
+                "./Files/subject03.txt"
             ],
             // specified the dubugger as gdb
             "MIMode": "gdb",
@@ -34,7 +34,7 @@
                 // Command line arguments passed to the program.
                 "args": [
                     "./Files/subject02.txt",
-                    "./files/subject03.txt"
+                    "./Files/subject03.txt"
                 ],
                 // specified the dubugger as gdb
                 "MIMode": "gdb",
@@ -48,14 +48,14 @@
                 // Command line arguments passed to the program.
                 "args": [
                     "./Files/subject02.txt",
-                    "./files/subject03.txt"
+                    "./Files/subject03.txt"
                 ],
                 // specified the dubugger as gdb
                 "MIMode": "gdb",
                 // specified the debugger path (default as windows's location)
                 "miDebuggerPath": "/usr/bin/gdb",
-                // add below to avoid debug ending's messy code:
-                // [1] + Done            "/usr/bin/gdb" --interpreter=mi
+                // add below to avoid debug ending's messy code in WSL:
+                // [1] + Done            "/usr/bin/gdb" --interpreter=mi...
                 "miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi",
                 // add below to avoid debug ending's error notification:
                 // Unable to open 'libc-start.c': File not found.

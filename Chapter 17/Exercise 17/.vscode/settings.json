@@ -44,7 +44,12 @@
     "cstring": "cpp",
     "ctime": "cpp",
     "valarray": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "bit": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "numeric": "cpp",
+    "random": "cpp"
   },
   "cortex-debug.registerUseNaturalFormat": false
 }

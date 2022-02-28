@@ -121,7 +121,7 @@
             },
             "args": [
                 "./Files/subject02.txt",
-                "./files/subject03.txt"
+                "./Files/subject03.txt"
             ],
             "group": {
                 // 'run' task set to 'test' group (user defined)
