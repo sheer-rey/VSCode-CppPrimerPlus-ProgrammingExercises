@@ -29,12 +29,20 @@ namespace subject02
       return;
     }
     cout << "Open file \"" << file_name << "\" successful!" << endl;
-    cout << "Enter series of characters with the end of simulative EOF:" << endl;
-    while (cin.peek() != EOF)
-      fout << char(cin.get());
+    cout << "Enter series of characters with the end of "
+         << "Enter and simulative EOF ('\\n' + EOF):" << endl;
+    char c = cin.get();
+    while (cin)
+    {
+      fout << c;
+      c = cin.get();
+    }
     fout.close();
-    cin.sync();
     cin.clear();
+    cin.sync();
+    // add below to avoid cin always extract EOF from istream buffer
+    // after type in simulative EOF to terminate input
+    cin.putback(' ').ignore();
     cout << "Done!" << endl;
   }
 }
@@ -574,7 +582,7 @@ namespace subject07
 
   void GetStrs(ifstream &fin, vector<string> &vec_str)
   {
-    long str_lenth;
+    long long str_lenth;
     char *str;
     fin.read((char *)&str_lenth, sizeof(str_lenth));
     while (fin)
