@@ -8,6 +8,7 @@
 #include <list>
 #include <iterator>
 #include <algorithm>
+#include <type_traits>
 
 namespace subject01
 {
@@ -59,18 +60,30 @@ namespace subject02
 namespace subject03
 {
   using std::cout, std::endl;
+  using std::is_arithmetic;
   using std::string;
 
+  // modify log:
+  // modified the variatic template function to allow any numbers of parameters
+  // of any type, reference my question in stackoverflow
+  // for the realize detail or theory
+  // https://stackoverflow.com/questions/71323065/in-c-is-there-any-way-for-variatic-template-to-ignore-non-arithmetic-type-or/71323297#71323297
   template <typename T>
   long double SumValue(T first)
   {
-    return first;
+    if constexpr (is_arithmetic<T>::value)
+      return first;
+    else
+      return 0;
   }
 
   template <typename T, typename... Args>
   long double SumValue(T first, Args... args)
   {
-    return first + SumValue(args...);
+    if constexpr (is_arithmetic<T>::value)
+      return SumValue(first) + SumValue(args...);
+    else
+      return SumValue(args...);
   }
 }
 

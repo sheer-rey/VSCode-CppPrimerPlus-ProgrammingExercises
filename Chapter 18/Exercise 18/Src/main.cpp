@@ -54,7 +54,8 @@ int main(int argc, const char *argv[])
     std::cout << "Subject 03" << std::endl;
     {
         using namespace subject03;
-        cout << SumValue(41.3, 1, 10, 2, 100) << endl;
+        cout << SumValue("sheer.rey", 'd', 41.3, 1, string("abcde"), 10, 2, 100)
+             << endl;
     }
     std::cin.sync();
     std::cout << "\nPress any key to continue." << std::endl;
